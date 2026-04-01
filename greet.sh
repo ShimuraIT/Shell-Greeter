@@ -5,7 +5,7 @@ FIRST_NAME=$(getent passwd "$USER" | cut -d: -f5 | cut -d, -f1 | cut -d' ' -f1)
 #4. (cut) Pull only the first.
 
 #Test if empty, fall back on username.
-if [ -z "$FULL_NAME" ]; then
+if [ -z "$FIRST_NAME" ]; then
 	FIRST_NAME="$USER"
 fi
 
